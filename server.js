@@ -18,6 +18,9 @@ app.post('/signup', validateSignup, (req, res) => {
     res.status(200).json({ message: "Signup successful" });
 });
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000');
+
+const PORT = 3000;
+const HOST = '0.0.0.0';
+app.listen(PORT, HOST, () => {
+    console.log(`Server running on http://${HOST}:${PORT}`);
 });
